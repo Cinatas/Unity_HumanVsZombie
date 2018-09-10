@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 59
+  controlID: 15
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 140
+  controlID: 73
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
-  controlID: 141
+  controlID: 74
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 142
+  controlID: 75
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,8 +225,8 @@ MonoBehaviour:
     y: 0
     width: 243
     height: 676
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -446,9 +446,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e5b0000
-    m_LastClickedID: 23406
-    m_ExpandedIDs: 58cdfcff02fafcff3407fefff018feffc43efefff06afeff44eefeff14fafeffa812ffffe6f6ffffd2fbffff00000000e6480000
+    m_SelectedIDs: 1a390000
+    m_LastClickedID: 0
+    m_ExpandedIDs: b6e7ffff3cebffffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -467,7 +467,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
   m_ExpandedScenes:
-  - test
+  - 1_1
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -503,9 +503,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.9046535, y: -24.874155, z: -0.11328125}
+    m_Target: {x: 8.744862, y: -8.650639, z: 0.13470078}
     speed: 2
-    m_Value: {x: -5.9046535, y: -24.874155, z: -0.11328125}
+    m_Value: {x: 8.744862, y: -8.650639, z: 0.13470078}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -537,9 +537,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 33.262653
+    m_Target: 10.680435
     speed: 2
-    m_Value: 33.262653
+    m_Value: 10.680435
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -613,20 +613,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/AstarPathfindingProject/Core/AI
+    - Assets/Resources/EnemyObject
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/AstarPathfindingProject/Core/AI
+  - Assets/Resources/EnemyObject
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\qd9218\GitHubPorject\Unity_HumanVsZombie
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 159}
-    m_SelectedIDs: b0330000
-    m_LastClickedID: 13232
-    m_ExpandedIDs: 00000000922e00002a30000092310000ac320000e634000004370000163700009e37000098380000263900008e390000443b00007c3e00009e3f0000b8440000ba440000bc44000000ca9a3b
+    scrollPos: {x: 0, y: 583}
+    m_SelectedIDs: 503d0000
+    m_LastClickedID: 15696
+    m_ExpandedIDs: 00000000782e000010300000543000007831000092320000cc340000ec360000fe36000086370000803800000e390000763900002c3b0000643e0000863f0000aa430000ac430000ae43000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -654,7 +654,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000922e00002a3000006e300000e634000004370000163700009e370000263900008e390000443b00007c3e00009e3f0000b8440000ba440000bc440000
+    m_ExpandedIDs: 00000000782e0000103000007831000092320000cc340000ec360000fe36000086370000803800000e390000763900002c3b0000643e0000863f0000aa430000ac430000ae430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -706,7 +706,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 315}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 239
 --- !u!114 &20

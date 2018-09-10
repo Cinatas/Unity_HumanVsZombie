@@ -41,11 +41,12 @@ GameObject:
   - component: {fileID: 114290294146118022}
   - component: {fileID: 54744229918400194}
   - component: {fileID: 65348953410731554}
-  - component: {fileID: 114092757292463148}
   - component: {fileID: 114073173577160774}
   - component: {fileID: 114890347314420558}
   - component: {fileID: 114023465196782270}
-  - component: {fileID: 114653627078568208}
+  - component: {fileID: 114884807016784002}
+  - component: {fileID: 114454066206046614}
+  - component: {fileID: 114130445620164392}
   m_Layer: 9
   m_Name: Female_Zombies_06
   m_TagString: Untagged
@@ -60,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1506968098311622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.25, y: -4.32, z: 0}
+  m_LocalPosition: {x: 18.96, y: -11.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4574782900066070}
@@ -142,19 +143,6 @@ MonoBehaviour:
   m_stopFrameIdx: 1
   m_dirAnimCtrl: {fileID: 11400000, guid: 0fcdb868eccc8c84fa9d3f6523a7472e, type: 2}
   m_dir: 0
---- !u!114 &114092757292463148
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1506968098311622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1008978193ae4364baf493b07c510847, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetPos: {x: 0, y: 0}
-  MinDistToMoveNextTarget: 0.02
 --- !u!114 &114126568881448562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,6 +159,20 @@ MonoBehaviour:
   Radious: 0.08
   MaxForce: 0.5
   MaxSpeed: 0.5
+--- !u!114 &114130445620164392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506968098311622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114290294146118022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -204,7 +206,7 @@ MonoBehaviour:
     y: -0.040000916
     width: 0.27999878
     height: 0.12000275
---- !u!114 &114653627078568208
+--- !u!114 &114454066206046614
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,16 +214,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 1506968098311622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b90ebce5ae3e749ba926da6d9607f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 847a14d4dc9cc43679ab34fc78e0182f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetPos: {x: 4.8, y: -6.43}
-  LockAnimDir: 0
-  SightDistance: 100
-  IsSightBlockedByBlockedTiles: 0
-  MinDistToReachTarget: 0.32
-  AngRandRadious: 0.15
-  AngRandOff: 15
+  version: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  speed: 1
+  enableRotation: 0
+  rotationIn2D: 0
+  rotationSpeed: 10
+  interpolatePathSwitches: 1
+  switchPathInterpolationSpeed: 5
+  targetCompatibility: {fileID: 0}
+--- !u!114 &114884807016784002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506968098311622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask: -1
 --- !u!114 &114890347314420558
 MonoBehaviour:
   m_ObjectHideFlags: 1

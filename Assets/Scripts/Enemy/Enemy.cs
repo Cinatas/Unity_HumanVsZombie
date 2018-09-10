@@ -1,4 +1,5 @@
 ﻿using CreativeSpore.RpgMapEditor;
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using TDzombie.Manager;
@@ -23,7 +24,8 @@ namespace TDzombie
         protected Vector2 Destnation;
         private CircleCollider2D DetectTrigger;
         protected List<Soldier> InSightList;
-        FollowerAI mapPathFinding;
+       // FollowerAI mapPathFinding;
+        AIDestinationSetter mapPathFinding;
         DirectionalAnimation aniCon;
 
         EnemyDataModel data;
@@ -58,7 +60,8 @@ namespace TDzombie
         private void Awake()
         {
             InSightList = new List<Soldier>();
-            mapPathFinding = this.GetComponent<FollowerAI>();
+            //mapPathFinding = this.GetComponent<FollowerAI>();
+            mapPathFinding = this.GetComponent<AIDestinationSetter>();
             data = this.GetComponent<EnemyDataModel>();
             aniCon = this.GetComponent<DirectionalAnimation>();
         }
@@ -113,12 +116,13 @@ namespace TDzombie
                 {
                     float deltaX = Random.Range(-0.9f * AttackRaduis, 0.9f * AttackRaduis);
                     float deltaY = Random.Range(-0.9f * AttackRaduis, 0.9f * AttackRaduis);
-                    mapPathFinding.TargetPos = soldier.transform.position + new Vector3(deltaX,deltaY,0);
+                    //mapPathFinding.TargetPos = soldier.transform.position + new Vector3(deltaX,deltaY,0);
+                    mapPathFinding.targetPos = soldier.transform.position + new Vector3(deltaX, deltaY, 0);
                 }   
             }
             else
             {
-                mapPathFinding.TargetPos = Destnation;
+                mapPathFinding.targetPos = new Vector3(Destnation.x,Destnation.y,0);
             }  
 
         }
