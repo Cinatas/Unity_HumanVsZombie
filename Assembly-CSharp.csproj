@@ -482,6 +482,7 @@
     <Compile Include="Assets\StrangeIoC\scripts\strange\framework\impl\Binding.cs" />
     <Compile Include="Assets\StrangeIoC\scripts\strange\framework\impl\SemiBinding.cs" />
     <Compile Include="Assets\StrangeIoC\scripts\strange\ReadMe.cs" />
+    <Compile Include="Assets\test\testPathFind.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
