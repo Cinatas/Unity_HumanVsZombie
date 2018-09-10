@@ -118,7 +118,6 @@ namespace TDzombie
             }
             else
             {
-                print(mapPathFinding == null);
                 mapPathFinding.TargetPos = Destnation;
             }  
 

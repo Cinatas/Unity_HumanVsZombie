@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{CFDDA465-0733-7552-8B0C-9B4C33CA2AE5}</ProjectGuid>
+    <ProjectGuid>{53C5AB79-2F1A-54A8-17E4-EE042D2322FF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -282,6 +282,7 @@
     <Compile Include="Assets\CreativeSpore\RpgMapEditor\Scripts\Utils\HandlesEx.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
+    <Compile Include="Assets\Scripts\DataModel\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyDataModel.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyGenerator.cs" />
@@ -289,8 +290,10 @@
     <Compile Include="Assets\Scripts\Enemy\Router.cs" />
     <Compile Include="Assets\Scripts\enum\EnemyType.cs" />
     <Compile Include="Assets\Scripts\enum\SoldierAnimationState.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameResourceManager.cs" />
     <Compile Include="Assets\Scripts\interface\ILive.cs" />
+    <Compile Include="Assets\Scripts\PlayerInfomation.cs" />
     <Compile Include="Assets\Scripts\Root\MyGameContextView.cs" />
     <Compile Include="Assets\Scripts\Root\MyGameMVCSContext.cs" />
     <Compile Include="Assets\Scripts\Soldier\Soldier.cs" />
@@ -601,16 +604,16 @@
     <None Include="Assets\AstarPathfindingProject\link.xml" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Program Files/Unity_Lastest/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -811,25 +814,25 @@
       <HintPath>D:/Program Files/Unity_Lastest/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.ClipperLib">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Assets/AstarPathfindingProject/Plugins/Clipper/Pathfinding.ClipperLib.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Assets/AstarPathfindingProject/Plugins/Clipper/Pathfinding.ClipperLib.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Poly2Tri">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Assets/AstarPathfindingProject/Plugins/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Assets/AstarPathfindingProject/Plugins/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTween43">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="DOTween46">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
     </Reference>
     <Reference Include="DOTween50">
-      <HintPath>D:/qd9218/GitHubPorject/Unity_Project/TDzombie/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+      <HintPath>D:/qd9218/GitHubPorject/Unity_HumanVsZombie/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
