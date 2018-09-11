@@ -186,6 +186,9 @@ namespace Pathfinding {
 			}
 		}
 
+        [HideInInspector]
+        public float RotateAngle = 0;
+
 		/** \copydoc Pathfinding::IAstarAI::isStopped */
 		public bool isStopped { get; set; }
 
@@ -494,7 +497,9 @@ namespace Pathfinding {
 
 			if (enableRotation) nextRotation = SimulateRotationTowards(direction, deltaTime);
 			else nextRotation = simulatedRotation;
-		}
+            RotateAngle = SimulateRotationTowards(direction, deltaTime).eulerAngles.z;
+
+        }
 
 		/** \copydoc Pathfinding::IAstarAI::FinalizeMovement */
 		public void FinalizeMovement (Vector3 nextPosition, Quaternion nextRotation) {
@@ -503,6 +508,7 @@ namespace Pathfinding {
 			simulatedRotation = nextRotation;
 			if (updatePosition) tr.position = nextPosition;
 			if (updateRotation) tr.rotation = nextRotation;
+            print(nextRotation.eulerAngles);
 		}
 
 		Quaternion SimulateRotationTowards (Vector3 direction, float deltaTime) {

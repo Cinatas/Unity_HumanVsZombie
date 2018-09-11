@@ -37,7 +37,6 @@ GameObject:
   - component: {fileID: 4295777528121104}
   - component: {fileID: 114305276722775820}
   - component: {fileID: 114063717962807734}
-  - component: {fileID: 114851906726707798}
   - component: {fileID: 114998547277565822}
   - component: {fileID: 54156102855025126}
   - component: {fileID: 65739967637814136}
@@ -240,22 +239,6 @@ MonoBehaviour:
   AttackSpeed: 0.5
   Attack: 3
   bouns: 10
---- !u!114 &114851906726707798
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1350830414943918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b1d4aa56761f1459233408975510ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Veloc: {x: 0, y: 0, z: 0}
-  Acc: {x: 0, y: 0, z: 0}
-  Radious: 0.08
-  MaxForce: 0.5
-  MaxSpeed: 0.5
 --- !u!114 &114896530632590186
 MonoBehaviour:
   m_ObjectHideFlags: 1

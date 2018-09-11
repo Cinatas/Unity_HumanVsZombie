@@ -37,14 +37,19 @@ namespace Pathfinding {
             {
                 if(target != null)
                 {
-                    ai.destination = target.position;
+                    ai.destination = target.position;                    
                 }
                 else
                 {
                     ai.destination = targetPos;
-                }                
-            }
-            
+                }
+                
+            }            
 		}
+
+        public Vector3 GetDestination()
+        {
+            return ai.destination;
+        }
 	}
 }

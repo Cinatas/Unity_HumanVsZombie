@@ -31,7 +31,7 @@ MonoBehaviour:
       LayerType: 0
       SortingLayer: Default
       SortingOrder: 1
-      Depth: 0.5
+      Depth: 0.9
     - Tiles: 24faffffffffffff
       Visible: 1
       Name: Builds

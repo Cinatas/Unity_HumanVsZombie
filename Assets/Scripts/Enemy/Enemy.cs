@@ -24,7 +24,6 @@ namespace TDzombie
         protected Vector2 Destnation;
         private CircleCollider2D DetectTrigger;
         protected List<Soldier> InSightList;
-       // FollowerAI mapPathFinding;
         AIDestinationSetter mapPathFinding;
         DirectionalAnimation aniCon;
 
@@ -60,7 +59,6 @@ namespace TDzombie
         private void Awake()
         {
             InSightList = new List<Soldier>();
-            //mapPathFinding = this.GetComponent<FollowerAI>();
             mapPathFinding = this.GetComponent<AIDestinationSetter>();
             data = this.GetComponent<EnemyDataModel>();
             aniCon = this.GetComponent<DirectionalAnimation>();
@@ -116,15 +114,17 @@ namespace TDzombie
                 {
                     float deltaX = Random.Range(-0.9f * AttackRaduis, 0.9f * AttackRaduis);
                     float deltaY = Random.Range(-0.9f * AttackRaduis, 0.9f * AttackRaduis);
-                    //mapPathFinding.TargetPos = soldier.transform.position + new Vector3(deltaX,deltaY,0);
                     mapPathFinding.targetPos = soldier.transform.position + new Vector3(deltaX, deltaY, 0);
                 }   
             }
             else
             {
-                mapPathFinding.targetPos = new Vector3(Destnation.x,Destnation.y,0);
-            }  
+                mapPathFinding.targetPos = new Vector3(Destnation.x,Destnation.y,this.transform.position.z);
+            }
 
+
+
+            ChangeDirection();
         }
 
         public void Hurt(float damage)
@@ -146,7 +146,7 @@ namespace TDzombie
 
         void ChangeMoveSpeed(float speed)
         {
-            this.GetComponent<MovingBehaviour>().MaxSpeed = speed;
+              this.GetComponent<AILerp>().speed = speed;
         }
 
         /// <summary>
@@ -162,6 +162,18 @@ namespace TDzombie
         {            
             EditorCompatibilityUtils.CircleCap(0, transform.position, transform.rotation, DetectRadius);
             EditorCompatibilityUtils.CircleCap(0, transform.position, transform.rotation, AttackRaduis);
+        }
+
+        void ChangeDirection()
+        {
+            if (mapPathFinding.GetDestination().x < this.transform.position.x)
+            {
+                aniCon.SetAnimDirection(Vector2.left);
+            }
+            else
+            {
+                aniCon.SetAnimDirection(Vector2.right);
+            }           
         }
 
         IEnumerator Attack()
